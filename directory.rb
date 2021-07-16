@@ -1,14 +1,16 @@
-students = [
-{name: "Legoshi", Species: :wolf},
-{name: "Haru", Species: :rabbit},
-{name: "Louis", Species: :deer},
-{name: "Juno", Species: :wolf},
-{name: "Pina", Species: :tiger},
-{name: "Fudge", Species: :red_panda},
-{name: "Jack", Species: :dog},
-{name: "Collot", Species: :dog},
-{name: "Bill", Species: :duck}
-]
+
+def input_students
+  puts "Please enter the names of the students"
+  puts "to finish, please just hit return twice"
+  students =[]
+  name = gets.chomp
+  while !name.empty? do
+    students << {name: name}
+    puts "Now we have #{students.count}"
+    name = gets.chomp
+  end
+  students
+end
 
 
 def print_header
@@ -18,7 +20,7 @@ end
 
 def print(students)
   students.each do |student|
-    puts "#{student[:name]}, #{student[:Species]}"
+    puts "#{student[:name]}"
   end
 end
 
@@ -27,6 +29,7 @@ def print_footer(names)
 end
 
 #nothing happens until we call the methods
+students = input_students
 print_header
 print(students)
 print_footer(students)
