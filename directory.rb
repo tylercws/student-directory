@@ -1,13 +1,13 @@
 students = [
-"Legoshi",
-"Haru",
-"Louis",
-"Juno",
-"Pina",
-"Fudge",
-"Jack",
-"Collot",
-"Bill"
+{name: "Legoshi", Species: :wolf},
+{name: "Haru", Species: :rabbit},
+{name: "Louis", Species: :deer},
+{name: "Juno", Species: :wolf},
+{name: "Pina", Species: :tiger},
+{name: "Fudge", Species: :red_panda},
+{name: "Jack", Species: :dog},
+{name: "Collot", Species: :dog},
+{name: "Bill", Species: :duck}
 ]
 
 
@@ -16,9 +16,9 @@ def print_header
   puts "---------------------------------"
 end
 
-def print(names)
-  names.each do |name|
-    puts name
+def print(students)
+  students.each do |student|
+    puts "#{student[:name]}, #{student[:Species]}"
   end
 end
 
