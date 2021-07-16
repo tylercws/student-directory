@@ -1,13 +1,18 @@
 student_count = 9
-
+students = [
+"Legoshi",
+"Haru",
+"Louis",
+"Juno",
+"Pina",
+"Fudge",
+"Jack",
+"Collot",
+"Bill"
+]
 puts "The Students of Cherryton Academy"
-puts "Legoshi"
-puts "Haru"
-puts "Louis"
-puts "Juno"
-puts "Pina"
-puts "Fudge"
-puts "Jack"
-puts "Collot"
-puts "Bill"
-print "Overall, we have #{student_count} great students!"
+puts "---------------------------------"
+students.each do |student|
+  puts student
+end
+print "Overall, we have #{students.count} great students!"
