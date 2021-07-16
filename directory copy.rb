@@ -28,10 +28,10 @@ def print_footer(names)
   puts "Overall, we have #{names.count} great students"
 end
 
-def start_with_letter(students)
+def begin_letter(students)
   students.each do |student|
-    if student.start_with?("T") == true
-      puts student
+    if student[:name].start_with?("T") == true
+      puts "#{student[:name]} begins with T"
     end
   end
 end
@@ -41,4 +41,4 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
-starts_with_letter(students)
+begin_letter(students)
